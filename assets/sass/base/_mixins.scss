@@ -17,3 +17,35 @@
 	    background-color: $border;
     }
 }
+
+@mixin square($size) {
+	width: $size;
+	height: $size;
+}
+
+@mixin rounded($radius: 0.5em) {
+  // -webkit-border-radius: $radius; 
+  // -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin round-container {
+	@include rounded(50%);
+	overflow: hidden;
+}
+
+@mixin object-fit {
+	/* For browsers that support 'object-fit' */
+	@supports ( object-fit: cover ) {
+		height: 100%;
+		left: 0;
+		-o-object-fit: cover;
+		object-fit: cover;
+		top: 0;
+		-ms-transform: none;
+		-moz-transform: none;
+		-webkit-transform: none;
+		transform: none;
+		width: 100%;
+	}
+}
