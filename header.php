@@ -54,28 +54,30 @@
 		</div>
 	</header><!-- #masthead -->
 
-	<?php do_action('sydney_after_header'); ?>
+	<?php if ( !is_singular( 'employees' )) : ?>
+		<?php do_action('sydney_after_header'); ?>
 
-	<div class="sydney-hero-area">
-		<?php sydney_slider_template(); ?>
-		<div class="header-image">
-			<?php sydney_header_overlay(); ?>
+		<div class="sydney-hero-area">
+			<?php sydney_slider_template(); ?>
+			<div class="header-image">
+				<?php sydney_header_overlay(); ?>
 
-			<?php
-			if ( has_post_thumbnail() ) : ?>
-				<img class="header-inner" src="<?php the_post_thumbnail_url( 'full' ); ?> " width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
-			<?php else: ?>
-				<img class="header-inner" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
-			<?php endif; ?>
+				<?php
+				if ( has_post_thumbnail() ) : ?>
+					<img class="header-inner" src="<?php the_post_thumbnail_url( 'full' ); ?> " width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
+				<?php else: ?>
+					<img class="header-inner" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
+				<?php endif; ?>
 
+			</div>
+			<?php sydney_header_video(); ?>
+
+			<?php do_action('sydney_inside_hero'); ?>
 		</div>
-		<?php sydney_header_video(); ?>
 
-		<?php do_action('sydney_inside_hero'); ?>
-	</div>
-
-	<?php do_action('sydney_after_hero'); ?>
-
+		<?php do_action('sydney_after_hero'); ?>
+	<?php endif; ?>
+		
 	<div id="content" class="page-wrap">
 		<div class="container content-wrapper">
 			<div class="row">	

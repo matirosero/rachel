@@ -10,9 +10,13 @@
 	}
 }
 
-.page .entry-header .entry-title {
-	@include heading-style;
-	font-size: 42px;
+.entry-header .entry-title {
+	.page &,
+	.single-employees & {
+		@include heading-style;
+		font-size: 42px;
+	}
+
 }
 
 .service .roll-icon-box .service-thumb {
@@ -21,4 +25,8 @@
 	img {
 		@include object-fit;
 	}
+}
+
+.site-header {
+	background-color: rgba( $white, .9 );
 }

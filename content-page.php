@@ -9,7 +9,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php
-	if ( get_theme_mod('site_header_type', 'image') == 'nothing' ) :
+	if ( get_theme_mod('site_header_type', 'image') == 'nothing' || is_singular( 'employees' )) :
 	?>
 		<header class="entry-header">
 			<?php the_title( '<h1 class="title-post entry-title">', '</h1>' ); ?>
