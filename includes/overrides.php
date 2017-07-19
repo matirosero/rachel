@@ -31,7 +31,7 @@ function sydney_header_style() {
 				.header-image {
 					background-image: none;
 					height: auto !important;
-				}		
+				}
 			}
 		</style>
 	<?php
