@@ -19,14 +19,29 @@
 
 }
 
-.service .roll-icon-box .service-thumb {
-	@include square(100px);
-	@include round-container;
-	img {
-		@include object-fit;
-	}
-}
 
 .site-header {
 	background-color: rgba( $white, .9 );
+}
+
+.sydney_services_widget {
+	.service {
+		.roll-icon-box .service-thumb {
+			@include square(100px);
+			@include round-container;
+			img {
+				@include object-fit;
+			}
+		}
+		h3 + p {
+			display: none;
+		}
+	}
+}
+
+.roll-team .team-item:hover {
+	>.team-inner .team-pop {
+		opacity:0;
+		cursor: default;
+	}
 }
