@@ -22,8 +22,10 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info container">
 			&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. Todos los derechos reservados.
+			<br />
+			<span class="footer-credits"><?php printf( __( 'Desarrollo: %1$s.', 'sydney' ), '<a href="https://matilderosero.com" rel="designer">Matilde Rosero</a>' ); ?>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Design and development: %1$s.', 'sydney' ), '<a href="https://matilderosero.com" rel="designer">Matilde Rosero</a>' ); ?>
+			<?php printf( __( 'Fotografías: %1$s.', 'sydney' ), '<a href="https://www.facebook.com/EduOakPhotography" rel="designer">EduOak Photography</a>' ); ?></span>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
