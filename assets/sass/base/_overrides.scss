@@ -28,10 +28,25 @@
 .sydney_services_widget {
 	.service {
 		.roll-icon-box .service-thumb {
-			@include square(100px);
-			@include round-container;
+
+			a {
+				@include square(200px);
+				@include round-container;
+				margin: 0 auto;
+				display: block;
+
+				&.compat-object-fit {
+					background-size: cover;
+					background-position: center center;
+					img { // hide image if object fit is not supported - opacity to 0 for the link area
+						opacity: 0;
+					}
+				}
+			}
 			img {
 				@include object-fit;
+				// height: 100px;
+				// width: auto;
 			}
 		}
 		h3 + p {
@@ -46,3 +61,6 @@
 		cursor: default;
 	}
 }
+
+
+
