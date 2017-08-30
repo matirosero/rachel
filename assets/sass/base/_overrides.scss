@@ -25,6 +25,14 @@
 	padding: 10px 0;
 }
 
+.slide-inner {
+	.maintitle,
+	.subtitle {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+}
+
 .sydney_services_widget {
 	.service {
 		.roll-icon-box .service-thumb {
@@ -63,4 +71,9 @@
 }
 
 
-
+.site-footer a {
+    color: #fff !important;
+    &:hover {
+    	color: $green !important;
+    }
+}
