@@ -32,7 +32,7 @@
 							<span><i class="fa fa-envelope fa-fw"></i></span><a href="mailto:info@enparalelors.com">info@enparalelors.com</a>
 						</div>
 						<div class="contact-facebook">
-							<span><i class="fa fa-facebook fa-fw"></i></span><a href="https://www.facebook.com/enparalelors/">enparalelors</a>
+							<span><i class="fa fa-facebook fa-fw"></i></span><a href="https://www.facebook.com/enparalelors/" target="_blank">enparalelors</a>
 						</div>
 					</aside>
 					<?php //dynamic_sidebar( 'footer-1'); ?>
